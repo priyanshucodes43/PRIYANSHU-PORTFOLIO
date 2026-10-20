@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priyanshu Kumar Tiwary | Software Engineer</title>
+  <meta name="description" content="Personal portfolio of Priyanshu Kumar Tiwary - Software Engineer specializing in Python, DCA (Diploma in Computer Applications), C, C++, and Java development.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Canvas Background Particles -->
+  <canvas id="bg-canvas"></canvas>
+  
+  <!-- Cursor Glow Follower -->
+  <div class="cursor-glow" id="cursor-glow"></div>
+
+  <!-- Floating Glass Navigation Bar -->
+  <header>
+    <nav class="navbar" id="navbar">
+      <a href="#hero" class="navbar-brand">
+        <span class="dot"></span> PRIYANSHU<span class="gradient-text">.DEV</span>
+      </a>
+      
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#timeline" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-status">
+            <span class="pulse-dot"></span> Available for projects & engineering roles
+          </div>
+          
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Priyanshu Kumar Tiwary</span>
+          </h1>
+
+          <div class="hero-role-wrapper">
+            <span class="hero-role-badge">
+              <i class="fa-solid fa-code"></i> Software Engineer
+            </span>
+          </div>
+          
+          <div class="hero-subtitle">
+            <span id="typewriter"></span><span class="typing-cursor"></span>
+          </div>
+
+          <p class="hero-description">
+            Passionate developer with a 6-month <strong>Diploma in Computer Applications (DCA)</strong>, proficient in <strong>Python</strong> automation & web solutions, actively expanding into high-performance <strong>C, C++, and Java</strong> software engineering.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary" id="btn-view-projects">
+              <i class="fa-solid fa-rocket"></i> View Projects
+            </a>
+            <a href="#contact" class="btn btn-secondary" id="btn-get-in-touch">
+              <i class="fa-solid fa-envelope"></i> Get In Touch
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <h3 class="counter" data-target="6">0</h3>
+              <p>Months DCA Certified</p>
+            </div>
+            <div class="stat-item">
+              <h3 class="counter" data-target="15">0</h3>
+              <p>Completed Scripts/Projects</p>
+            </div>
+            <div class="stat-item">
+              <h3 class="counter" data-target="4">0</h3>
+              <p>Core Languages (Py/C/C++/Java)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-card">
+            <img src="assets/hero.jpg" alt="Developer Tech Banner" class="hero-img">
+            <div class="tech-badge-container">
+              <span class="tech-badge"><i class="fa-brands fa-python"></i> Python</span>
+              <span class="tech-badge"><i class="fa-solid fa-code"></i> C / C++</span>
+              <span class="tech-badge"><i class="fa-brands fa-java"></i> Java</span>
+              <span class="tech-badge"><i class="fa-solid fa-graduation-cap"></i> DCA Diploma</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// DISCOVER MY JOURNEY</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        <p class="section-subtitle">Bridging foundational computer applications with software engineering</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="about-tabs">
+            <button class="about-tab active" data-tab="story">Background</button>
+            <button class="about-tab" data-tab="philosophy">Philosophy</button>
+            <button class="about-tab" data-tab="goals">Goals</button>
+          </div>
+
+          <div class="tab-content active" id="tab-story">
+            <div class="about-text">
+              <p>
+                Welcome to my portfolio! I completed a rigorous 6-month <strong>Diploma in Computer Applications (DCA)</strong>, mastering core computer fundamentals, database management, and essential web technology tools.
+              </p>
+              <p>
+                My primary coding language is <strong>Python</strong>, which I use for building automated tools, data manipulation scripts, and web utilities. I am currently diving deep into low-level systems and object-oriented paradigms with <strong>C, C++, and Java</strong>.
+              </p>
+            </div>
+            <ul class="info-list">
+              <li class="info-item">
+                <span class="label">Education</span>
+                <span class="value">6-Month DCA Diploma</span>
+              </li>
+              <li class="info-item">
+                <span class="label">Primary Stack</span>
+                <span class="value">Python, Web Tech</span>
+              </li>
+              <li class="info-item">
+                <span class="label">Currently Learning</span>
+                <span class="value">C, C++, Java Systems</span>
+              </li>
+              <li class="info-item">
+                <span class="label">Location</span>
+                <span class="value">Open to Remote / On-Site</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="tab-content" id="tab-philosophy">
+            <div class="about-text">
+              <p>
+                I believe in writing clean, well-documented code with strong logic structure. Combining practical computer applications with deep engineering principles allows me to build solutions that are both practical and performant.
+              </p>
+            </div>
+          </div>
+
+          <div class="tab-content" id="tab-goals">
+            <div class="about-text">
+              <p>
+                My near-term objective is to build a robust portfolio of software applications across Python automation, C++ algorithm engines, and Java enterprise desktop/backend modules.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-card">
+          <h3 class="mono-text" style="color: var(--accent-cyan); margin-bottom: 20px;">
+            <i class="fa-solid fa-terminal"></i> dev_profile.py
+          </h3>
+          <pre class="mono-text" style="background: rgba(4, 8, 20, 0.8); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); color: var(--text-secondary); overflow-x: auto; font-size: 0.88rem;">
+<span style="color: var(--accent-purple);">class</span> <span style="color: var(--accent-cyan);">SoftwareEngineer</span>:
+    <span style="color: var(--accent-purple);">def</span> <span style="color: #60a5fa;">__init__</span>(self):
+        self.name = <span style="color: #34d399;">"Priyanshu Kumar Tiwary"</span>
+        self.education = <span style="color: #34d399;">"DCA Diploma (6 Months)"</span>
+        self.primary_language = <span style="color: #34d399;">"Python"</span>
+        self.learning_stack = [<span style="color: #34d399;">"C"</span>, <span style="color: #34d399;">"C++"</span>, <span style="color: #34d399;">"Java"</span>]
+        self.passion = <span style="color: #34d399;">"Problem Solving & Systems Architecture"</span>
+
+    <span style="color: var(--accent-purple);">def</span> <span style="color: #60a5fa;">get_status</span>(self):
+        <span style="color: var(--accent-purple);">return</span> <span style="color: #34d399;">"Ready to solve real-world problems!"</span>
+          </pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// TECHNICAL CAPABILITIES</span>
+        <h2 class="section-title">Skills & <span class="gradient-text">Proficiencies</span></h2>
+        <p class="section-subtitle">A blend of computer applications, Python development, and software engineering</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon"><i class="fa-brands fa-python"></i></div>
+            <h4>Python Development</h4>
+          </div>
+          <div class="skill-progress-item">
+            <div class="skill-info"><span>Python Core & Logic</span><span>85%</span></div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" data-progress="85"></div></div>
+          </div>
+          <div class="skill-progress-item">
+            <div class="skill-info"><span>Scripting & Automation</span><span>80%</span></div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" data-progress="80"></div></div>
+          </div>
+          <div class="skill-progress-item">
+            <div class="skill-info"><span>File I/O & Modules</span><span>78%</span></div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" data-progress="78"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <h4>DCA Course Foundations</h4>
+          </div>
+          <div class="skill-progress-item">
+            <div class="skill-info"><span>Office Applications Suite</span><span>90%</span></div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" data-progress="90"></div></div>
+          </div>
+          <div class="skill-progress-item">
+            <div class="skill-info"><span>Database Concepts (SQL Basics)</span><span>75%</span></div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" data-progress="75"></div></div>
+          </div>
+          <div class="skill-progress-item">
+            <div class="skill-info"><span>Web Fundamentals (HTML/CSS)</span><span>82%</span></div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" data-progress="82"></div></div>
+          </div>
+        </div>
+
+        <div class="skill-category-card">
+          <div class="category-header">
+            <div class="category-icon"><i class="fa-solid fa-gears"></i></div>
+            <h4>C / C++ & Java Roadmap</h4>
+          </div>
+          <div class="skill-progress-item">
+            <div class="skill-info"><span>C / C++ Foundations</span><span>65%</span></div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" data-progress="65"></div></div>
+          </div>
+          <div class="skill-progress-item">
+            <div class="skill-info"><span>Java OOP Concepts</span><span>60%</span></div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" data-progress="60"></div></div>
+          </div>
+          <div class="skill-progress-item">
+            <div class="skill-info"><span>Data Structures & Memory</span><span>70%</span></div>
+            <div class="progress-bar-bg"><div class="progress-bar-fill" data-progress="70"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Showcase Section -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// PORTFOLIO SHOWCASE</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-subtitle">Real-world projects built with Python, DCA applications, C++, and Java</p>
+      </div>
+
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="python">Python</button>
+        <button class="filter-btn" data-filter="cpp-java">C++ / Java</button>
+        <button class="filter-btn" data-filter="dca">DCA & Web</button>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+        <!-- Project Card 1: Student Record & Marks Management System -->
+        <div class="project-card" data-category="python">
+          <div class="project-image-wrapper">
+            <img src="assets/student_mgmt.jpg" alt="Student Record & Marks Management System" class="project-image">
+            <div class="project-overlay">
+              <button class="btn btn-secondary view-project-btn" data-id="1">
+                <i class="fa-solid fa-eye"></i> View Details
+              </button>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-category">Python & SQLite Database</span>
+            <h3 class="project-title">Student Record & Marks Management System</h3>
+            <p class="project-desc">College submission project for managing student admissions, course enrollments, subject marks calculation, and report card generation.</p>
+            <div class="project-tech-tags">
+              <span class="tag">Python 3</span>
+              <span class="tag">SQLite Database</span>
+              <span class="tag">Report Generation</span>
+              <span class="tag">DCA College Project</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 2: Digital Library Automation System -->
+        <div class="project-card" data-category="python">
+          <div class="project-image-wrapper">
+            <img src="assets/library_system.jpg" alt="Digital Library Automation & Book Issue System" class="project-image">
+            <div class="project-overlay">
+              <button class="btn btn-secondary view-project-btn" data-id="2">
+                <i class="fa-solid fa-eye"></i> View Details
+              </button>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-category">Python & File Management</span>
+            <h3 class="project-title">Digital Library Automation & Book Issue System</h3>
+            <p class="project-desc">Automated library management system designed in Python to track book inventory, issue/return logs, and overdue fine calculations.</p>
+            <div class="project-tech-tags">
+              <span class="tag">Python 3</span>
+              <span class="tag">File I/O</span>
+              <span class="tag">Algorithms</span>
+              <span class="tag">Data Structures</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 3: Store Billing & Inventory Management System -->
+        <div class="project-card" data-category="dca">
+          <div class="project-image-wrapper">
+            <img src="assets/dca_project.jpg" alt="Store Billing & Inventory Management System" class="project-image">
+            <div class="project-overlay">
+              <button class="btn btn-secondary view-project-btn" data-id="3">
+                <i class="fa-solid fa-eye"></i> View Details
+              </button>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-category">DCA & SQL Database</span>
+            <h3 class="project-title">Store Billing & Inventory Management System</h3>
+            <p class="project-desc">Retail billing system built with database tools, automated GST tax calculation, itemized invoice printing, and stock monitoring.</p>
+            <div class="project-tech-tags">
+              <span class="tag">MS Access / SQL</span>
+              <span class="tag">HTML5 / CSS3</span>
+              <span class="tag">Excel Macros</span>
+              <span class="tag">DCA Diploma</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 4: Employee Payroll & Attendance System -->
+        <div class="project-card" data-category="cpp-java">
+          <div class="project-image-wrapper">
+            <img src="assets/python_project.jpg" alt="Employee Payroll & Attendance System" class="project-image">
+            <div class="project-overlay">
+              <button class="btn btn-secondary view-project-btn" data-id="4">
+                <i class="fa-solid fa-eye"></i> View Details
+              </button>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-category">Python / Java Desktop App</span>
+            <h3 class="project-title">Employee Payroll & Attendance System</h3>
+            <p class="project-desc">Automated payroll desktop application that calculates monthly salaries, tax deductions, attendance, and generates payslips.</p>
+            <div class="project-tech-tags">
+              <span class="tag">Python Tkinter</span>
+              <span class="tag">OOP Concepts</span>
+              <span class="tag">OpenPyXL</span>
+              <span class="tag">Desktop App</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Timeline Section -->
+  <section class="section" id="timeline">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// ACADEMIC ROADMAP</span>
+        <h2 class="section-title">Education & <span class="gradient-text">Milestones</span></h2>
+        <p class="section-subtitle">Academic certifications and software engineering progression</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">COMPLETED (6 MONTHS)</span>
+            <h3 class="timeline-title">Diploma in Computer Applications (DCA)</h3>
+            <p class="timeline-subtitle">Institute of Computer Applications</p>
+            <p style="color: var(--text-secondary); font-size: 0.92rem;">
+              Comprehensive 6-month certification covering Computer Hardware Basics, Operating Systems, MS Office Professional Suite, Database Management System (DBMS), and Web Fundamentals.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">SPECIALIZATION</span>
+            <h3 class="timeline-title">Python Software Development</h3>
+            <p class="timeline-subtitle">Core Programming & Automation</p>
+            <p style="color: var(--text-secondary); font-size: 0.92rem;">
+              Mastered Python syntax, functional programming, Object-Oriented Programming (OOP), file manipulation, data structures, and automation scripting.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">UPCOMING / CURRENT ROADMAP</span>
+            <h3 class="timeline-title">C, C++ & Java Systems Specialization</h3>
+            <p class="timeline-subtitle">Software Engineering Core</p>
+            <p style="color: var(--text-secondary); font-size: 0.92rem;">
+              Deep dive into C memory management, C++ Object-Oriented design patterns, and Java cross-platform enterprise application development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// LET'S CONNECT</span>
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+        <p class="section-subtitle">Have a project idea, question, or opportunity? Drop a message!</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info-card">
+          <h3 style="margin-bottom: 24px;">Contact Information</h3>
+          
+          <a href="mailto:pt140425@gmail.com" class="contact-method" id="contact-email-link">
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Email Me</span>
+              <p style="font-weight: 600; color: var(--accent-cyan);" id="contact-email-text">pt140425@gmail.com</p>
+            </div>
+          </a>
+
+          <a href="https://github.com/priyanshucodes43" target="_blank" rel="noopener noreferrer" class="contact-method" id="contact-github-link">
+            <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+            <div>
+              <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">GitHub Profile</span>
+              <p style="font-weight: 600; color: var(--accent-cyan);" id="contact-github-text">github.com/priyanshucodes43</p>
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/priyanshu-tiwary-964033435" target="_blank" rel="noopener noreferrer" class="contact-method" id="contact-linkedin-link">
+            <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
+            <div>
+              <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">LinkedIn</span>
+              <p style="font-weight: 600; color: var(--accent-cyan);" id="contact-linkedin-text">linkedin.com/in/priyanshu-tiwary-964033435</p>
+            </div>
+          </a>
+
+          <div style="margin-top: 32px; padding: 20px; background: rgba(37, 99, 235, 0.1); border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+            <h4 style="color: var(--accent-cyan); margin-bottom: 8px;"><i class="fa-solid fa-circle-check"></i> Open For Hiring</h4>
+            <p style="font-size: 0.88rem; color: var(--text-secondary);">Available for junior software engineer roles, Python script development, and freelance DCA computer solutions.</p>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <label class="form-label" for="name">Your Name</label>
+            <input type="text" id="name" class="form-input" placeholder="e.g. John Doe" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Your Email Address</label>
+            <input type="email" id="email" class="form-input" placeholder="john@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="subject">Subject</label>
+            <input type="text" id="subject" class="form-input" placeholder="Project Inquiry / Job Opportunity" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message">Message</label>
+            <textarea id="message" class="form-textarea" placeholder="Hello! I would like to discuss..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Detail Modal -->
+  <div class="modal-backdrop" id="project-modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
+      <div id="modal-body">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Area -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Priyanshu Kumar Tiwary. Built with Python, C/C++, Java & DCA Focus.</p>
+      <p style="font-size: 0.8rem;">Designed in Deep Engineer Blue & Obsidian Theme</p>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript Logic -->
+  <script src="script.js"></script>
+</body>
+</html>
